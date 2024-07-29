@@ -52,12 +52,12 @@ def create_table_in_docx(data, filename="Test.docx"):
 
 if __name__ == "__main__":
     sheet_name = input("Enter the sheet name: ")
-    range_str = input("Enter the range (e.g., A1:C5): ")
+    range_sheet = input("Enter the range (e.g., A1:C5): ")
     file_name = input("Enter the output file name: ")
     if file_name:
         file_name = file_name + ".docx"
 
-    data = readexcel(sheet_name, range_str)
-    create_table_in_docx(data, file_name)
+    datafromex = readexcel(sheet_name, range_sheet)
+    create_table_in_docx(datafromex, file_name)
 
     print("Table created successfully!")
